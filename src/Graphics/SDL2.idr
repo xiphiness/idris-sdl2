@@ -16,6 +16,9 @@ data Surface = MkSurface Ptr
 export
 data Texture = MkTexture Ptr
 
+public export
+data Window = MkWindow Ptr
+
 export
 init : Int -> Int -> IO Renderer
 init x y = do

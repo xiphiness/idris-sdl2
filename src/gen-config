@@ -6,10 +6,18 @@ sdl2_libs="$(pkg-config --libs sdl2)"
 sdl2_cflags="$(pkg-config --cflags sdl2)"
 sdl2_gfx_libs="$(pkg-config --libs SDL2_gfx)"
 sdl2_gfx_cflags="$(pkg-config --cflags SDL2_gfx)"
+glew_libs="$(pkg-config --libs glew)"
+glew_cflags="$(pkg-config --cflags glew)"
+libpng_libs="$(pkg-config --libs libpng)"
+libpng_cflags="$(pkg-config --cflags libpng)"
 
 cat <<! > Graphics/Config.idr
 %flag C "${sdl2_libs}"
 %flag C "${sdl2_cflags}"
 %flag C "${sdl2_gfx_libs}"
 %flag C "${sdl2_gfx_cflags}"
+%flag C "${glew_libs}"
+%flag C "${glew_cflags}"
+%flag C "${libpng_libs}"
+%flag C "${libpng_cflags}"
 !
