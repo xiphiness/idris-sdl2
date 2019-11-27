@@ -6,7 +6,7 @@ all: Graphics/Config.idr sdl2.o
 sdl2.o: Graphics/Config.idr sdl2.c sdl2.h
 
 Graphics/Config.idr:
-	@./gen-config
+	sh ./gen-config
 
 .PHONY: clean
 clean:
